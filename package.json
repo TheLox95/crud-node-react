@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "watch": "concurrently \"onchange \"**/*.ts\" \"**/*.js\" -- tsc\" \"supervisor ./bin/www\""
+    "start": "concurrently \"node ./bin/www\" \"cd ./ui/ && npm start\" "
   },
   "dependencies": {
     "@types/sequelize": "^4.0.67",
@@ -19,7 +18,6 @@
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
-    "onchange": "^3.2.1",
     "concurrently": "^3.4.0"
   }
 }
